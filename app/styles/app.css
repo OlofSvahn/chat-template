@@ -48,12 +48,17 @@
   border-radius: 17px;
   background-color:#ecf0f1;
   max-width:85%;
-  width: 100px;
+  width: 100px; 
+  /* ingen aning varför ovan width funkar */
 }
 .input{
     overflow:auto;
     max-height: 100px;
     outline: none;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
 }
 .input::-webkit-scrollbar {
     width: 0px;
