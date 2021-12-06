@@ -1,0 +1,53 @@
+.chat-header{
+    padding: 10px 12px 9px 8px;
+    background-color: #c33d31;
+}
+.chat-header .title{
+  margin: 0 621px 0 8px;
+  font-family: Arial;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: white;
+}
+
+.chat-window{
+    background: linear-gradient(#f9f7f2, #f9f7f2);
+}
+
+.bubble{
+    border-radius: 5px 5px 5px 0px;
+    padding: 8px 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+    background-color: #3498db;
+}
+ .message{
+    opacity: 0.9;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+.input{
+    overflow: auto;
+    max-height: 100px;
+    width: 200px;
+}
+
+span.input[contenteditable] {
+    display: inline-block;
+}
+span.input[contenteditable]:empty::before {
+    content: 'Skriv ett meddelande...';
+    display: inline-block;
+}
+span.input[contenteditable]:empty:focus::before {
+    content: ' ';
+}
