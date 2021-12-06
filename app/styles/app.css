@@ -35,10 +35,19 @@
     letter-spacing: normal;
     color: #ffffff;
 }
+
+.msg-bar-holder{
+    padding: 0 4px;
+    background-color: white;
+}
 .input{
-    overflow: auto;
+    overflow:auto;
     max-height: 100px;
     width: 200px;
+}
+.input::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }
 
 span.input[contenteditable] {
