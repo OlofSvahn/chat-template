@@ -1,10 +1,11 @@
+.chat{
+    font-family: Arial;
+}
 .chat-header{
     padding: 10px 12px 9px 8px;
     background-color: #c33d31;
 }
 .chat-header .title{
-  margin: 0 621px 0 8px;
-  font-family: Arial;
   font-size: 22px;
   font-weight: normal;
   font-stretch: normal;
@@ -39,23 +40,53 @@
 .msg-bar-holder{
     padding: 0 4px;
     background-color: white;
+    width: 100%;
+}
+.text-input{
+  margin: 10px 4px;
+  padding: 6px 14px 6px 10px;
+  border-radius: 17px;
+  background-color:#ecf0f1;
+  max-width:85%;
+  width: 100px;
 }
 .input{
     overflow:auto;
     max-height: 100px;
-    width: 200px;
+    outline: none;
 }
 .input::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
+}
+.icon-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    margin-bottom: 3px;
+    width: 40px;
+    height: 54px;
+    padding: 15px 8px 15px 8px;
+}
+.icon-wrapper > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    align-self: flex-end;
+}
+.icon-wrapper > a > img{
 }
 
 span.input[contenteditable] {
     display: inline-block;
 }
 span.input[contenteditable]:empty::before {
-    content: 'Skriv ett meddelande...';
+    content: 'Aa';
     display: inline-block;
+    color: grey;
 }
 span.input[contenteditable]:empty:focus::before {
     content: ' ';
