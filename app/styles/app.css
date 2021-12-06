@@ -14,14 +14,24 @@
   letter-spacing: normal;
   color: white;
 }
+.chat-header > .header-elements{
+    margin-right: 5px;
+    margin-left: 5px;
+    gap: 20%;
+}
+.chat-header > .header-elements > a > img{
+    width: 24px;
+    height: 24px;
+    margin: 0 8px 1px 0;
+}
 
 .chat-window{
     background: linear-gradient(#f9f7f2, #f9f7f2);
 }
 
 .bubble{
-    border-radius: 5px 5px 5px 0px;
-    padding: 8px 10px;
+    border-radius: 8px 8px 8px 0px;
+    padding: 5px 10px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
     background-color: #3498db;
 }
@@ -33,7 +43,7 @@
     font-stretch: normal;
     font-style: normal;
     line-height: 1.33;
-    letter-spacing: normal;
+    letter-spacing:0.5px;
     color: #ffffff;
 }
 
@@ -96,3 +106,27 @@ span.input[contenteditable]:empty::before {
 span.input[contenteditable]:empty:focus::before {
     content: ' ';
 }
+
+.collapse {
+    visibility: hidden;
+  }
+  .collapse.in {
+    visibility: visible;
+  }
+  .collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition-property: height, visibility;
+    transition-property: height, visibility;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+  }
+  .collapsing.width {
+    -webkit-transition-property: width, visibility;
+    transition-property: width, visibility;
+    width: 0;
+    height: auto;
+  }
