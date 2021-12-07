@@ -58,7 +58,7 @@
   border-radius: 17px;
   background-color:#ecf0f1;
   max-width:85%;
-  width: 100px; 
+  width: 100px;
   /* ingen aning varför ovan width funkar */
 }
 .input{
@@ -107,12 +107,10 @@ span.input[contenteditable]:empty:focus::before {
     content: ' ';
 }
 
-.collapse {
-    visibility: hidden;
+  .collapse:not(.show){
+      display: none!important;
   }
-  .collapse.in {
-    visibility: visible;
-  }
+
   .collapsing {
     position: relative;
     height: 0;
@@ -123,7 +121,7 @@ span.input[contenteditable]:empty:focus::before {
     transition-duration: 0.35s;
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
-  }
+  } 
   .collapsing.width {
     -webkit-transition-property: width, visibility;
     transition-property: width, visibility;
