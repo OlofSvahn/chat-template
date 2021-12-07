@@ -1,3 +1,9 @@
+@media (max-width: 600px) { 
+    [class*="banner"] {
+        display: none;
+    }
+} 
+
 .chat{
     font-family: Arial;
 }
@@ -57,7 +63,7 @@
   padding: 6px 14px 6px 10px;
   border-radius: 17px;
   background-color:#ecf0f1;
-  max-width:85%;
+  /* max-width:85%; */
   width: 100px;
   /* ingen aning varför ovan width funkar */
 }
@@ -79,7 +85,6 @@
     align-items: center;
     justify-content: center;
     align-self: flex-end;
-    margin-bottom: 3px;
     width: 40px;
     height: 54px;
     padding: 15px 8px 15px 8px;
@@ -109,6 +114,7 @@ span.input[contenteditable]:empty:focus::before {
 
   .collapse:not(.show){
       display: none!important;
+      min-width:100px;
   }
 
   .collapsing {
@@ -117,8 +123,8 @@ span.input[contenteditable]:empty:focus::before {
     overflow: hidden;
     -webkit-transition-property: height, visibility;
     transition-property: height, visibility;
-    -webkit-transition-duration: 0.35s;
-    transition-duration: 0.35s;
+    -webkit-transition-duration: .35s;
+    transition-duration: .35s;
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   } 
