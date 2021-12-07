@@ -1,6 +1,6 @@
 <div class="msg-bar-holder w-100 d-flex justify-content-between">
 
-    <div class="collapse width d-flex flex-row" id="collapseExample">
+    <div class="collapse width d-flex flex-row show" id="collapseExample">
         <div class="icon-wrapper">
             <a href="#">
                 <img class="image-button" src="\images\ic-gallery-album.svg">
@@ -17,17 +17,20 @@
             </a>
         </div>
     </div>
-    <div class="icon-wrapper">
-        <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample"
-            aria-expanded="undefined" aria-controls="collapseExample">
-            <img class="image-button" src="\images\ic-arrow-right.svg">
-        </button>
-    </div>
 
+{{!-- TODO: Prevent double clicking in and outside textfield --}}
+    <div class="icon-wrapper {{unless this.isCollapsed 'd-none'}}">
+        <div type="button" {{ on 'click' this.showCollapse}}>
+            <img class="image-button" src="\images\ic-arrow-right.svg">
+        </div>
+    </div>
 
     <div class="text-input d-flex justify-content-center flex-grow-1">
-        <span class="input w-100 column-reverse" role="textbox" contenteditable=""></span>
+        <span class="input w-100 column-reverse" role="textbox" contenteditable="" 
+        {{ on 'focusin' this.hideCollapse}}{{ on 'focusout' this.showCollapse}}
+        ></span>
     </div>
+    {{!--  --}}
 
     <div class="icon-wrapper">
         <a href="#">
