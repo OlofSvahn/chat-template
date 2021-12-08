@@ -1,3 +1,10 @@
-<div class="bubble m-2" style="max-width: fit-content;">
-    <span class="message">{{@message.text}}</span>
+<div class="msg-wrapper d-flex flex-row">
+    <div class="bubble m-2">
+        <span class="message">{{@message.text}}</span>
+    </div>
+    <div class="msg-misc">
+            <a class="icon-wrapper misc" href="#">
+                <img src="\images\ui-icons-ic-elipsis.svg">
+            </a>
+    </div>
 </div>

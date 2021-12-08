@@ -10,15 +10,15 @@
         </a>
     </div>
     {{else}}
-    <div class="icon-wrapper {{unless this.isCollapsed 'd-none'}}">
-        <div type="button" {{ on 'click' this.showCollapse}}>
+    <div class="icon-wrapper arrow {{unless this.isCollapsed 'd-none'}}">
+        <a {{ on 'click' this.showCollapse}}>
             <img class="image-button" src="\images\ic-arrow-right.svg">
-        </div>
-    </div>            
+        </a>
+    </div>
     {{/unless}}
 
     <div class="collapse width d-flex flex-row show" id="collapseExample">
-        
+
         <div class="icon-wrapper">
             <a href="#">
                 <img class="image-button" src="\images\ic-camera.svg">
@@ -31,10 +31,12 @@
         </div>
     </div>
 
-    <div class="text-input d-flex justify-content-center flex-grow-1">
-        <span class="input w-100 column-reverse" role="textbox" contenteditable="" {{ on 'focusin' this.hideCollapse}}{{
-            on 'focusout' this.showCollapse}}></span>
+    <div class="text-input {{unless this.isCollapsed 'collapsed'}} d-flex justify-content-center flex-grow-1">
+        <span class="input w-100 column-reverse" role="textbox" contenteditable="" {{on 'focusin' this.hideCollapse}}
+            {{on 'focusout' this.showCollapse}}>
+        </span>
     </div>
+
     {{!-- --}}
 
     <div class="icon-wrapper">

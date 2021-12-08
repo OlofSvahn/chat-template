@@ -1,8 +1,8 @@
-@media (max-width: 600px) { 
+@media (max-width: 600px) {
     [class*="banner"] {
         display: none;
     }
-} 
+}
 
 .chat{
     font-family: Arial;
@@ -36,6 +36,7 @@
 }
 
 .bubble{
+    max-width: 80%;
     border-radius: 8px 8px 8px 0px;
     padding: 5px 10px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
@@ -53,6 +54,17 @@
     color: #ffffff;
 }
 
+.icon-wrapper.misc{
+    height: 24px;
+    width: 24px;
+    opacity: 0.2;
+    border-radius: 18px;
+    background-color: #d8d8d8;
+}
+.icon-wrapper.misc > img{
+    width: 18px;
+}
+
 .msg-bar-holder{
     padding: 0 4px;
     background-color: white;
@@ -66,6 +78,9 @@
   /* max-width:85%; */
   width: 100px;
   /* ingen aning varför ovan width funkar */
+}
+.text-input.collapsed{
+    max-height: 40px;
 }
 .input{
     overflow:auto;
@@ -89,6 +104,12 @@
     height: 54px;
     padding: 15px 8px 15px 8px;
 }
+.icon-wrapper.arrow{
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.15s;
+}
 .icon-wrapper > a{
     display: flex;
     align-items: center;
@@ -96,8 +117,6 @@
     padding: 0;
     margin: 0;
     align-self: flex-end;
-}
-.icon-wrapper > a > img{
 }
 
 span.input[contenteditable] {
@@ -127,10 +146,35 @@ span.input[contenteditable]:empty:focus::before {
     transition-duration: .35s;
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
-  } 
+  }
   .collapsing.width {
     -webkit-transition-property: width, visibility;
     transition-property: width, visibility;
     width: 0;
     height: auto;
   }
+
+.msg-misc{
+    display:none;
+}
+
+.msg-wrapper:hover .msg-misc{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.15s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

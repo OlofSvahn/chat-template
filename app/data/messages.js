@@ -17,4 +17,11 @@ export const messages = [
     userId: '3',
     timeStamp: '11.00',
   },
+  {
+    id: '4',
+    text: 'I am stay at home mom and I voted for Donald J Trump and he has helped me so much in my worthless life and ' + 
+    'thats all I have to say about that. Vote for me in the upcoming Karen-awards, please, I need something to do, you know!',
+    userId: '4',
+    timeStamp: '23.00',
+  },
 ];
