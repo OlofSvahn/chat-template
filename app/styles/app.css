@@ -110,6 +110,12 @@
     animation-timing-function: ease-in;
     animation-duration: 0.15s;
 }
+.icon-wrapper.gallery{
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.15s;
+}
 .icon-wrapper > a{
     display: flex;
     align-items: center;
@@ -176,5 +182,13 @@ span.input[contenteditable]:empty:focus::before {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+@keyframes fadeOutOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }
