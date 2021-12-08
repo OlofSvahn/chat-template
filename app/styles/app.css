@@ -35,11 +35,33 @@
     background: linear-gradient(#f9f7f2, #f9f7f2);
 }
 
+.msg-wrapper.my-message{
+    justify-content: flex-end;
+}
+.msg-date-divider{
+    height: 34px;
+    padding: 10px;
+    margin:20px;
+}
+.msg-date-divider > span{
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.24px;
+    text-align: center;
+}
+
 .bubble{
     max-width: 80%;
     border-radius: 8px 8px 8px 0px;
     padding: 5px 10px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+    background-color:white;
+}
+.bubble.my-message{
+    border-radius: 8px 8px 0px 8px;
     background-color: #3498db;
 }
  .message{
@@ -51,15 +73,19 @@
     font-style: normal;
     line-height: 1.33;
     letter-spacing:0.5px;
-    color: #ffffff;
+    color: #333333;
+}
+
+.message.my-message{
+    color: white;
 }
 
 .icon-wrapper.misc{
     height: 24px;
     width: 24px;
-    opacity: 0.2;
+    opacity: 0.4;
     border-radius: 18px;
-    background-color: #d8d8d8;
+    background-color: #e6e6e6;
 }
 .icon-wrapper.misc > img{
     width: 18px;

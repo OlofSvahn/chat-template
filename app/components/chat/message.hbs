@@ -1,10 +1,27 @@
-<div class="msg-wrapper d-flex flex-row">
+{{#if @message.isDateDivider}}
+<div class="msg-date-divider d-flex justify-content-center">
+    <span class="text-muted">{{@message.date}}</span>
+</div>
+{{else}}
+<div class="msg-wrapper {{if @message.isUserMessage 'my-message'}} d-flex flex-row">
+    {{#if @message.isUserMessage}}
+    <div class="msg-misc">
+        <a class="icon-wrapper misc" href="#">
+            <img src="\images\ui-icons-ic-elipsis.svg">
+        </a>
+    </div>
+    <div class="bubble my-message m-2">
+        <span class="message my-message">{{@message.text}}</span>
+    </div>
+    {{else}}
     <div class="bubble m-2">
         <span class="message">{{@message.text}}</span>
     </div>
     <div class="msg-misc">
-            <a class="icon-wrapper misc" href="#">
-                <img src="\images\ui-icons-ic-elipsis.svg">
-            </a>
+        <a class="icon-wrapper misc" href="#">
+            <img src="\images\ui-icons-ic-elipsis.svg">
+        </a>
     </div>
+    {{/if}}
 </div>
+{{/if}}
