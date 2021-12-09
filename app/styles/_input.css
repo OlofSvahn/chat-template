@@ -1,0 +1,122 @@
+.text-input{
+    margin: 10px 4px;
+    padding: 6px 14px 6px 10px;
+    border-radius: 17px;
+    background-color:#ecf0f1;
+    /* max-width:85%; */
+    width: 100px;
+    /* ingen aning varför ovan width funkar */
+  }
+  .text-input.collapsed{
+      max-height: 40px;
+  }
+  .input{
+      overflow:auto;
+      max-height: 100px;
+      outline: none;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+  }
+  .input::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* make scrollbar transparent */
+  }
+  .icon-wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-end;
+      width: 40px;
+      height: 54px;
+      padding: 15px 8px 15px 8px;
+  }
+  .icon-wrapper.arrow{
+      animation-name: fadeInOpacity;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 0.15s;
+  }
+  .icon-wrapper.gallery{
+      animation-name: fadeInOpacity;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
+      animation-duration: 0.15s;
+  }
+  .icon-wrapper > a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      align-self: flex-end;
+  }
+  
+  span.input[contenteditable] {
+      display: inline-block;
+  }
+  span.input[contenteditable]:empty::before {
+      content: 'Aa';
+      display: inline-block;
+      color: grey;
+  }
+  span.input[contenteditable]:empty:focus::before {
+      content: ' ';
+  }
+  
+    .collapse:not(.show){
+        display: none!important;
+        min-width:100px;
+    }
+  
+    .collapsing {
+      position: relative;
+      height: 0;
+      overflow: hidden;
+      -webkit-transition-property: height, visibility;
+      transition-property: height, visibility;
+      -webkit-transition-duration: .35s;
+      transition-duration: .35s;
+      -webkit-transition-timing-function: ease;
+      transition-timing-function: ease;
+    }
+    .collapsing.width {
+      -webkit-transition-property: width, visibility;
+      transition-property: width, visibility;
+      width: 0;
+      height: auto;
+    }
+  
+  .msg-misc{
+      display:none;
+  }
+  
+  .msg-wrapper:hover .msg-misc{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      animation-name: fadeInOpacity;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 0.15s;
+  }
+  
+  @keyframes fadeInOpacity {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  @keyframes fadeOutOpacity {
+      0% {
+          opacity: 1;
+      }
+      100% {
+          opacity: 0;
+      }
+  }

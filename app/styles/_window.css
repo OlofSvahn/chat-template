@@ -1,0 +1,4 @@
+.chat-window{
+    background: linear-gradient(#f9f7f2, #f9f7f2);
+    overflow: auto;
+}

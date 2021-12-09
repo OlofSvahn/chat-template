@@ -3,14 +3,14 @@ export const messages = [
     id: '0',
     text: 'This chat is really cool!',
     userId: '1',
-    timeStamp: new Date("2021-12-05 12:00"),
+    timeStamp: new Date("2021-12-03 12:00"),
     isUserMessage: false,
   },
   {
     id: '1',
     text:'Yeah, totally great message app',
     userId: '2',
-    timeStamp: new Date("2021-12-07 12:01"),
+    timeStamp: new Date("2021-12-04 12:01"),
     isUserMessage: false,
   },
   {
@@ -42,6 +42,20 @@ export const messages = [
     text: 'I hate my life but tonight Im gonna eat chicken wings which is nice I guess... but hey, whos counting? ',
     userId: '5',
     timeStamp: new Date("2021-12-08 12:02"),
+    isUserMessage: true,
+  },
+  {
+    id: '6',
+    text: 'I hate my life but tonight Im gonna eat chicken wings which is nice I guess... but hey, whos counting? ',
+    userId: '6',
+    timeStamp: new Date("2021-12-08 12:02"),
+    isUserMessage: true,
+  },
+  {
+    id: '7',
+    text: 'I hate my life but tonight Im gonna eat chicken wings which is nice I guess... but hey, whos counting? ',
+    userId: '7',
+    timeStamp: new Date("2021-12-09 12:02"),
     isUserMessage: true,
   },
 ];

@@ -1,0 +1,23 @@
+.chat-header{
+    padding: 10px 12px 9px 8px;
+    background-color: #c33d31;
+}
+.chat-header .title{
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: white;
+}
+.chat-header > .header-elements{
+    margin-right: 5px;
+    margin-left: 5px;
+    gap: 20%;
+}
+.chat-header > .header-elements > a > img{
+    width: 24px;
+    height: 24px;
+    margin: 0 8px 1px 0;
+}

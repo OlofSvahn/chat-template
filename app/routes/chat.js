@@ -1,25 +1,28 @@
 import Route from '@ember/routing/route';
 import { messages } from '../data/messages';
+import { sort } from '@ember/object/computed';
 
 export default class ChatRoute extends Route {
   model() {
+    let sortedMessages = messages.reverse();
+    console.log(sortedMessages);
+
     let messagesToDisplay = [];
-    for (let i = 0; i < messages.length-1; i++) {
-      const timeDiff = (messages[i+1].timeStamp - messages[i].timeStamp) / 60 / 60 / 1000;
-      console.log(timeDiff);
+
+    for (let i = 0; i < sortedMessages.length-1; i++) {
+      const timeDiff = (sortedMessages[i].timeStamp - sortedMessages[i+1].timeStamp) / 60 / 60 / 1000;
       if(timeDiff >= 24)
       {
-        messagesToDisplay.push(messages[i]);
-        let dateDivider = {date: new Date(messages[i+1].timeStamp).toDateString(), isDateDivider: true};
+        messagesToDisplay.push(sortedMessages[i]);
+        let dateDivider = {date: new Date(sortedMessages[i].timeStamp).toDateString(), isDateDivider: true};
         messagesToDisplay.push(dateDivider);
       }
       else{
-        messagesToDisplay.push(messages[i]);
+        messagesToDisplay.push(sortedMessages[i]);
       }
     }
-    messagesToDisplay.push(messages[messages.length-1]);
-    console.log(messagesToDisplay);
-    console.log(messages);
+
+    messagesToDisplay.push(sortedMessages[sortedMessages.length-1]);
     return messagesToDisplay;
   }
 }
