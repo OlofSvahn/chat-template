@@ -46,14 +46,14 @@ export const messages = [
   },
   {
     id: '6',
-    text: 'I hate my life but tonight Im gonna eat chicken wings which is nice I guess... but hey, whos counting? ',
+    text: 'The thing about green mushrooms and ham is that you have to add salt and ketchup, or else the plate will look boring, just sayin. My mom is an alcoholic.',
     userId: '6',
     timeStamp: new Date("2021-12-08 12:02"),
-    isUserMessage: true,
+    isUserMessage: false,
   },
   {
     id: '7',
-    text: 'I hate my life but tonight Im gonna eat chicken wings which is nice I guess... but hey, whos counting? ',
+    text: 'Also, the weight of my hand is not what you think, buckaroos!',
     userId: '7',
     timeStamp: new Date("2021-12-09 12:02"),
     isUserMessage: true,

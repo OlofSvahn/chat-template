@@ -14,14 +14,17 @@
         <span class="message my-message">{{@message.text}}</span>
     </div>
     {{else}}
+    <div class="message--avatar mb-2"></div>
     <div class="bubble m-2">
         <span class="message">{{@message.text}}</span>
     </div>
     <div class="msg-misc">
-        <a class="icon-wrapper misc" href="#">
+        <a class="icon-wrapper misc" data-toggle="collapse" href="#collapseDate{{@message.id}}" role="button" 
+        aria-expanded="false" aria-controls="collapseDate{{@message.id}}" {{ action "formatDateToTime" @message.timeStamp}}>
             <img src="\images\ui-icons-ic-elipsis.svg">
         </a>
     </div>
     {{/if}}
 </div>
+<div class="collapse message-date text-center" id="collapseDate{{@message.id}}">{{this.time}}</div>
 {{/if}}
