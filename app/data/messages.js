@@ -60,9 +60,9 @@ export const messages = [
   },
   {
     id: '8',
-    text: 'Also, the weight of my hand is not what you think, buckaroos!',
+    text: 'Hey, who here has been to Africa, be honest! I went there and didnt see one single lion or jaguar or water buffaloo. I mean what the fudge! I spent sixteen hours flying there and then when you get there, no one is a lion or a jaguar. Its all just people walking around with bags and suitcases and some of them are nice and some are just stressed out or whatever. Seems like home, you know, wheres all the animals lol? Next year no Botwsana for me, maybe Asia. I heard they have nice foods there, like soups and stuff. Anyway, f**k Hilary Clnton I guess.',
     userId: '8',
-    timeStamp: new Date("2021-12-09 12:02"),
-    isUserMessage: true,
+    timeStamp: new Date("2021-12-10 13:15"),
+    isUserMessage: false,
   },
 ];
