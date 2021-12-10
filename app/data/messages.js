@@ -58,4 +58,11 @@ export const messages = [
     timeStamp: new Date("2021-12-09 12:02"),
     isUserMessage: true,
   },
+  {
+    id: '8',
+    text: 'Also, the weight of my hand is not what you think, buckaroos!',
+    userId: '8',
+    timeStamp: new Date("2021-12-09 12:02"),
+    isUserMessage: true,
+  },
 ];

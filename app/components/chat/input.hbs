@@ -3,29 +3,29 @@
     {{!-- TODO: Prevent arrow-icon from reapperiong when rapidly double-clicking in and outside textfield --}}
     {{#unless this.isCollapsed}}
     <div class="icon-wrapper gallery">
-        <a href="#">
-            <img class="image-button" src="\images\ic-gallery-album.svg">
-        </a>
+        <button class="button gallery">
+            <img class="gallery-icon" src="\images\ic-gallery-album.svg">
+        </button>
     </div>
     {{else}}
     <div class="icon-wrapper arrow {{unless this.isCollapsed 'd-none'}}">
-        <a {{ on 'click' this.showCollapse}}>
-            <img class="image-button" src="\images\ic-arrow-right.svg">
-        </a>
+        <button class="button arrow" {{ on 'click' this.showCollapse}}>
+            <img class="arrow-icon" src="\images\ic-arrow-right.svg">
+        </button>
     </div>
     {{/unless}}
 
     <div class="collapse width d-flex flex-row show" id="collapseExample">
 
         <div class="icon-wrapper">
-            <a href="#">
-                <img class="image-button" src="\images\ic-camera.svg">
-            </a>
+            <button class="button camera">
+                <img class="camera-icon" src="\images\ic-camera.svg">
+            </button>
         </div>
         <div class="icon-wrapper">
-            <a href="#">
-                <img class="image-button" src="\images\ic-flower.svg">
-            </a>
+            <button class="button compliment">
+                <img class="compliment-icon" src="\images\ic-flower.svg">
+            </button>
         </div>
     </div>
 
@@ -38,8 +38,8 @@
     {{!-- --}}
 
     <div class="icon-wrapper">
-        <a href="#">
-            <img class="image-button" src="\images\ic-send.svg">
-        </a>
+        <button class="button send">
+            <img class="send-icon" src="\images\ic-send.svg">
+        </button>
     </div>
 </div>
