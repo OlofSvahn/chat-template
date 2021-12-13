@@ -7,13 +7,13 @@ export default class ChatInputComponent extends Component {
 
   @action
   showCollapse() {
-    $('.collapse').collapse('show');
+    $('.collapse.input').collapse('show');
     this.isCollapsed = false;
     console.log(this.isCollapsed);
   }
   @action
   hideCollapse() {
-    $('.collapse').collapse('hide');
+    $('.collapse.input').collapse('hide');
     this.isCollapsed = true;
     console.log(this.isCollapsed);
   }

@@ -3,27 +3,27 @@
     {{!-- TODO: Prevent arrow-icon from reapperiong when rapidly double-clicking in and outside textfield --}}
     {{#unless this.isCollapsed}}
     <div class="icon-wrapper gallery">
-        <button class="button gallery">
+        <button class="button gallery" type="button">
             <img class="gallery-icon" src="\images\ic-gallery-album.svg">
         </button>
     </div>
     {{else}}
     <div class="icon-wrapper arrow {{unless this.isCollapsed 'd-none'}}">
-        <button class="button arrow" {{ on 'click' this.showCollapse}}>
+        <button class="button arrow" type="button" {{ on 'click' this.showCollapse}}>
             <img class="arrow-icon" src="\images\ic-arrow-right.svg">
         </button>
     </div>
     {{/unless}}
 
-    <div class="collapse width d-flex flex-row show" id="collapseExample">
+    <div class="collapse input width d-flex flex-row show" id="collapseExample">
 
         <div class="icon-wrapper">
-            <button class="button camera">
+            <button class="button camera" type="button">
                 <img class="camera-icon" src="\images\ic-camera.svg">
             </button>
         </div>
         <div class="icon-wrapper">
-            <button class="button compliment">
+            <button class="button compliment" type="button">
                 <img class="compliment-icon" src="\images\ic-flower.svg">
             </button>
         </div>
@@ -38,7 +38,7 @@
     {{!-- --}}
 
     <div class="icon-wrapper">
-        <button class="button send">
+        <button class="button send" type="button">
             <img class="send-icon" src="\images\ic-send.svg">
         </button>
     </div>

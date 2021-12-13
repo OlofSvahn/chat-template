@@ -60,13 +60,38 @@
     opacity: 0.4;
     border-radius: 18px;
     background-color: #e6e6e6;
+    border: none;
 }
 .icon-wrapper.misc > img{
     width: 18px;
+}
+.icon-wrapper > .button{
+    outline: 0;
 }
 
 .msg-bar-holder{
     padding: 0 4px;
     background-color: white;
     width: 100%;
+}
+
+.collapsing.timeStamp{
+    visibility: hidden;
+    transition-duration: 0.15s;
+}
+
+.collapse.show.timeStamp{
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.10s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

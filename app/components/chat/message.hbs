@@ -6,9 +6,11 @@
 <div class="msg-wrapper {{if @message.isUserMessage 'my-message'}} d-flex flex-row">
     {{#if @message.isUserMessage}}
     <div class="msg-misc">
-        <a class="icon-wrapper misc" href="#">
+        <button class="icon-wrapper misc" type="button" data-toggle="collapse"
+            data-target="#collapseDate{{@message.id}}" aria-expanded="false" aria-controls="collapseDate{{@message.id}}"
+            {{action 'formatDateToTime' @message.timeStamp}}>
             <img src="\images\ui-icons-ic-elipsis.svg">
-        </a>
+        </button>
     </div>
     <div class="bubble my-message m-2">
         <span class="message my-message">{{@message.text}}</span>
@@ -19,13 +21,16 @@
         <span class="message">{{@message.text}}</span>
     </div>
     <div class="msg-misc">
-        <a class="icon-wrapper misc" data-toggle="collapse" href="#collapseDate{{@message.id}}" role="button" 
-        aria-expanded="false" aria-controls="collapseDate{{@message.id}}" {{ action "formatDateToTime" @message.timeStamp}}>
+        <button class="icon-wrapper misc" type="button" data-toggle="collapse"
+            data-target="#collapseDate{{@message.id}}" aria-expanded="false" aria-controls="collapseDate{{@message.id}}"
+            {{action 'formatDateToTime' @message.timeStamp}}>
             <img src="\images\ui-icons-ic-elipsis.svg">
-        </a>
+        </button>
     </div>
     {{/if}}
 </div>
 {{!-- NEEDS MORE WORK - COLLAPSE DOES NOT WORK PROPERLY --}}
-<div class="collapse message-date text-center" id="collapseDate{{@message.id}}">{{this.time}}</div>
+<div class="collapse timeStamp" id="collapseDate{{@message.id}}" style="overflow:visible;">
+    <div class="message-date text-center">{{this.time}}</div>
+</div>
 {{/if}}

@@ -23,14 +23,6 @@
       width: 0px;
       background: transparent; /* make scrollbar transparent */
   }
-  .icon-wrapper{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-self: center;
-      width: 44px;
-      height: 44px;
-  }
   .icon-wrapper.arrow{
       animation-name: fadeInOpacity;
       animation-iteration-count: 1;
@@ -71,12 +63,12 @@
       content: ' ';
   }
   
-    .collapse:not(.show){
+    .collapse.input:not(.show){
         display: none!important;
         min-width:100px;
     }
   
-    .collapsing {
+    .collapsing.input {
       position: relative;
       height: 0;
       overflow: hidden;
@@ -87,7 +79,7 @@
       -webkit-transition-timing-function: ease;
       transition-timing-function: ease;
     }
-    .collapsing.width {
+    .collapsing.input.width {
       -webkit-transition-property: width, visibility;
       transition-property: width, visibility;
       width: 0;
@@ -126,12 +118,3 @@
           opacity: 0;
       }
   }
-
-  /* .modal-backdrop {
-    display: none;
-    z-index: 1040 !important;
-}
-  .modal-content {
-    margin: 2px auto;
-    z-index: 1100 !important; */
-}
