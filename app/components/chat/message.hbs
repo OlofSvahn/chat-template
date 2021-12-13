@@ -3,6 +3,9 @@
     <span class="text-muted">{{@message.date}}</span>
 </div>
 {{else}}
+<div class="collapse empty" id="collapseDate{{@message.id}}" style="overflow:visible; ">
+    <div class="message-date text-center text-muted">hidden</div>
+</div>
 <div class="msg-wrapper {{if @message.isUserMessage 'my-message'}} d-flex flex-row">
     {{#if @message.isUserMessage}}
     <div class="msg-misc">
@@ -29,8 +32,7 @@
     </div>
     {{/if}}
 </div>
-{{!-- NEEDS MORE WORK - COLLAPSE DOES NOT WORK PROPERLY --}}
 <div class="collapse timeStamp" id="collapseDate{{@message.id}}" style="overflow:visible;">
-    <div class="message-date text-center">{{this.time}}</div>
+    <div class="message-date text-center text-muted">{{this.time}}</div>
 </div>
 {{/if}}
