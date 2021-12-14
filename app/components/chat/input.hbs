@@ -23,7 +23,7 @@
             </button>
         </div>
         <div class="icon-wrapper">
-            <button class="button compliment" type="button">
+            <button class="button compliment" type="button" {{on 'click' this.openModal}}>
                 <img class="compliment-icon" src="\images\ic-flower.svg">
             </button>
         </div>
@@ -42,4 +42,11 @@
             <img class="send-icon" src="\images\ic-send.svg">
         </button>
     </div>
+</div>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" {{on 'click' this.closeModal}}>&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
 </div>

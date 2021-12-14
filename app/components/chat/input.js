@@ -17,4 +17,14 @@ export default class ChatInputComponent extends Component {
     this.isCollapsed = true;
     console.log(this.isCollapsed);
   }
+  @action
+  openModal(){
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+  }
+  @action
+  closeModal(){
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
 }
